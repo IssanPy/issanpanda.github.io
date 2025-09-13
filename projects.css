@@ -151,3 +151,127 @@ body {
 .home-icon:hover {
   transform: scale(1.2);
 }
+:root {
+  --bg: #0b0d12;
+  --accent: #9ae6ff;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.15);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: white;
+  overflow-x: hidden;
+  cursor: none; /* Hide default cursor */
+}
+
+/* Background Canvas */
+#bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Projects Grid */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 120px auto 60px auto;
+  padding: 0 20px;
+}
+
+/* Project Cards */
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  text-align: center;
+  padding: 40px 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(154,230,255,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 0 40px rgba(154,230,255,0.35);
+}
+
+.project-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Custom Cursor */
+.cursor-dot, .cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #9ae6ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #9ae6ff, 0 0 20px #9ae6ff;
+}
+
+.cursor-ring {
+  width: 35px;
+  height: 35px;
+  border: 2px solid rgba(154, 230, 255, 0.6);
+  border-radius: 50%;
+  transition: transform 0.2s ease, border 0.3s ease;
+}
+
+.project-card:hover ~ .cursor-ring {
+  transform: scale(1.8);
+  border-color: #fff;
+}
+
+/* Home Icon */
+.home-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  text-decoration: none;
+  color: #0ff;
+  filter: drop-shadow(0 0 10px #0ff);
+  transition: transform 0.3s;
+}
+
+.home-icon:hover {
+  transform: scale(1.2);
+}
+
+/* 📱 Responsive */
+@media (max-width: 992px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
