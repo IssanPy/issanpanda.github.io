@@ -163,6 +163,16 @@ body {
     line-height: 1.5rem;
   }
 }
+/* Fix hidden content on smaller screens */
+@media (max-width: 768px) {
+  .container {
+    height: auto;          /* let container expand with content */
+    min-height: 100vh;     /* still cover screen */
+    overflow-y: auto;      /* allow scrolling if needed */
+    padding-top: 100px;    /* space for header/home button */
+  }
+}
+
 
 
 
