@@ -20,6 +20,57 @@ body {
   left: 0;
   z-index: -1;
 }
+/* ===================== */
+/* RESPONSIVE FIXES      */
+/* ===================== */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;     /* stack items vertically */
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 40px;
+    gap: 20px;
+  }
+
+  .text {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .photo {
+    margin: 20px 0;
+  }
+
+  .photo img {
+    width: 180px;   /* smaller for mobile */
+    margin: 0 auto;
+    display: block;
+  }
+
+  .text h1 {
+    margin-bottom: 18px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo img {
+    width: 150px;   /* even smaller on tiny screens */
+  }
+
+  .text h1 {
+    font-size: 1.6rem;
+  }
+
+  .text p {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+  }
+}
+
 
 /* Content Styling */
 .container {
@@ -112,5 +163,6 @@ body {
     line-height: 1.5rem;
   }
 }
+
 
 
