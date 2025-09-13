@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Issan Panda</title>
+  <link rel="stylesheet" href="projects.css">
+</head>
+<a href="index.html" class="home-icon">
+  🏠
+</a>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Canvas Background -->
+  <canvas id="bg"></canvas>
+
+  <!-- Projects Section -->
+  <section class="projects">
+    
+    <div class="project-card" onclick="openLink('web.html')">
+      <h2>Web Development</h2>
+      <p>Explore my websites and apps.</p>
+    </div>
+
+    <div class="project-card" onclick="openLink('video.html')">
+      <h2>Video Editing</h2>
+      <p>Watch some of my edited videos.</p>
+    </div>
+
+    <div class="project-card" onclick="openLink('music.html')">
+      <h2>Music Production</h2>
+      <p>Listen to my latest beats & mixes.</p>
+    </div>
+
+  </section>
+
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.min.js"></script>
+  <script src="projects.js"></script>
+
+  <script>
+    // Open project in new tab
+    function openLink(url) {
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>

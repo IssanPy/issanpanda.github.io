@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISSAN • 3D Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Audiowide&family=Exo+2:wght@700&family=Poppins:wght@900&display=swap" rel="stylesheet">
+
+  <!-- Three.js & GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <canvas id="scene3d"></canvas>
+
+  <!-- Navbar -->
+  <nav class="nav">
+    <div class="brand">Issan Panda</div>
+    <a href="about.html" target="_blank">About</a>
+    <a href="projects.html" target="_blank">Projects</a>
+    <a href="contact.html" target="_blank">Contact</a>
+    <a href="endorsement.html" target="_blank">Endorsements</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="eyebrow">Welcome</span>
+      <h1>Providing the <span class="highlight">best</span><br> project experience.</h1>
+      <p class="lede">I’m Issan Panda — a full-stack web architect, pro video editor, ethical hacker, music producer & social media strategist.</p>
+      <div class="cta-row">
+  <button class="btn" onclick="window.location.href='projects.html'">Work</button>
+  <button class="btn secondary" onclick="window.location.href='contact.html'">Hire Me</button>
+</div>
+
+
+    <div class="profile-wrapper">
+  <div class="profile-photo">
+    <img src="me.jpg" alt="Issan Panda">
+  </div>
+  
+
+  <div class="orbit orbit1"><span>Editing</span></div>
+  <div class="orbit orbit2"><span>WebDev</span></div>
+  <div class="orbit orbit3"><span>CyberSec</span></div>
+  <div class="orbit orbit4"><span>Producer</span></div>
+</div>
+
+
+  <!-- Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

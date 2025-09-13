@@ -1,0 +1,106 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0f;
+  color: white;
+  overflow: hidden;
+}
+
+/* Cursor */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff0080;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+  transition: transform 0.1s ease;
+}
+
+/* Canvas */
+#bg {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: -1;
+}
+
+/* Maintenance Content */
+.maintenance {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.title {
+  font-size: 3rem;
+  color: #ff0080;
+  text-shadow: 0 0 20px #ff0080;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  color: #ddd;
+}
+
+.highlight {
+  color: #ffcc00;
+  text-shadow: 0 0 15px #ffcc00;
+}
+
+.note {
+  font-size: 1rem;
+  margin-top: 20px;
+  color: #aaa;
+}
+
+/* Vinyl Animation */
+.vinyl {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 6px solid #333;
+  background: radial-gradient(circle, #111 60%, #ff0080 70%);
+  animation: spin 4s linear infinite;
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.6);
+  position: relative;
+}
+
+.vinyl::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #ffcc00;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.home-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  text-decoration: none;
+  color: #0ff;
+  filter: drop-shadow(0 0 10px #0ff);
+  transition: transform 0.3s;
+}
+
+.home-icon:hover {
+  transform: scale(1.2);
+}

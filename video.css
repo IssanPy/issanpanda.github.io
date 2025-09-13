@@ -1,0 +1,113 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0f;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Cursor */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffcc00;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+  transition: transform 0.1s ease;
+}
+
+/* Canvas Background */
+#bg {
+  position: fixed;
+  top: 0; left: 0;
+  z-index: -1;
+}
+
+/* Section */
+.videos {
+  min-height: 100vh;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #ffcc00;
+  text-shadow: 0 0 30px rgba(255, 204, 0, 0.8);
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* Video Grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.video-card {
+  position: relative;
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 20px;
+  padding: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(255, 204, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.05) rotateY(5deg);
+  box-shadow: 0 20px 60px rgba(255, 204, 0, 0.5);
+}
+
+video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  object-fit: cover;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+}
+
+.video-card:hover video {
+  filter: brightness(1);
+}
+
+.video-card h2 {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+.home-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  text-decoration: none;
+  color: #0ff;
+  filter: drop-shadow(0 0 10px #0ff);
+  transition: transform 0.3s;
+}
+
+.home-icon:hover {
+  transform: scale(1.2);
+}
