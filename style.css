@@ -425,3 +425,11 @@ body {
   .profile-photo { width: 120px; height: 120px; }
   .orbit { width: 150px; height: 150px; }
 }
+/* Hide orbit on smaller devices (tablet + phone) */
+@media (max-width: 1024px) {
+  .orbit {
+    display: none !important;
+  }
+}
+
+
