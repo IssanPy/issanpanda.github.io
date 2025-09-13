@@ -68,4 +68,49 @@ body {
 .home-icon:hover {
   transform: scale(1.2);
 }
+/* Responsive Layout Fix */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;      /* stack vertically */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px 20px 40px;    /* extra top padding for spacing */
+    text-align: center;
+  }
+
+  .photo img {
+    margin-right: 0;             /* remove side gap */
+    margin-bottom: 20px;         /* spacing below photo */
+    width: 200px;                /* shrink image a bit on mobile */
+  }
+
+  .text {
+    max-width: 100%;
+  }
+
+  .text h1 {
+    font-size: 2.2rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo img {
+    width: 160px; /* smaller phones */
+  }
+
+  .text h1 {
+    font-size: 1.8rem;
+  }
+
+  .text p {
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+  }
+}
+
 
