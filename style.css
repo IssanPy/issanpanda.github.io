@@ -356,7 +356,6 @@ body {
   z-index: 10;
 }
 
-
   .profile-photo {
     position: static;
     top: auto;
@@ -431,5 +430,4 @@ body {
     display: none !important;
   }
 }
-
 
